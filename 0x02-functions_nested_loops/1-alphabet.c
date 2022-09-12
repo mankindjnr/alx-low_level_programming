@@ -1,15 +1,8 @@
 #include <unistd.h>
 #include "main.h"
 /**
- *main - entry point
- *
- *Return: Always 0
+ *print_alphabet - printing alphabets
  */
-int main(void)
-{
-	print_alphabet();
-}
-
 void print_alphabet(void)
 {
 	char ch;
