@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int i, j;
+	int i;
 	long int fibo[300];
 	int count = 0;
 	long int sum = 0;
