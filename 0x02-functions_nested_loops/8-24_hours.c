@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <time.h>
-#include "holberton.h"
+#include "main.h"
 /**
  *jack_bauer - the time prototype
  */
