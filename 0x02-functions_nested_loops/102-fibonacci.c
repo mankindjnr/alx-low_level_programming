@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int i;
+	int i, j;
 	long int fibo[300];
 	int count = 0;
 
@@ -24,7 +24,7 @@ int main(void)
 			fibo[i] = i;
 		}
 	}
-	for (int j = 1; j <= 50; j++)
+	for (j = 1; j <= 50; j++)
 	{
 		printf("%li", fibo[j]);
 
