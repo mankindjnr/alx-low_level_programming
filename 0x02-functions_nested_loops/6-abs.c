@@ -5,7 +5,7 @@
 #include <math.h>
 /**
  *_abs - absolute value finder
- *@int: finding the absolute of
+ *@r: finding the absolute of
  *Return: Always 0
  */
 int _abs(int r)

@@ -10,6 +10,7 @@
  */
 int _islower(int c)
 {
+	/*code*/
 	if (islower(c))
 	{
 		return (1);
