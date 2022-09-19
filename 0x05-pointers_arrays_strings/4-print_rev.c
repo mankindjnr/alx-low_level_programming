@@ -5,6 +5,7 @@
 #include <ctype.h>
 /**
  *print_rev - reverse that string
+ *@s: the string
  */
 void print_rev(char *s)
 {
