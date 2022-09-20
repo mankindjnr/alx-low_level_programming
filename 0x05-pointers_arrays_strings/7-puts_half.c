@@ -16,7 +16,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		half = ((int)strlen(str) - 1) / 2;
+		half = ((int)strlen(str) + 1) / 2;
 	}
 
 	for (i = half; i < (int)strlen(str); i++)
