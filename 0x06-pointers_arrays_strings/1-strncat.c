@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- **_strncat - concatenates two strings
+ *_strncat - concatenates two strings
  *@dest: destination
  *@src: the source
  *@n: n bytes that can be used from src
