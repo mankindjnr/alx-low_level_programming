@@ -23,7 +23,7 @@ char *rot13(char *str)
 		{
 			str[count] = check + 13;
 		}
-		else if(isupper(check) && check > 77)
+		else if (isupper(check) && check > 77)
 		{
 			str[count] = check - 13;
 		}
