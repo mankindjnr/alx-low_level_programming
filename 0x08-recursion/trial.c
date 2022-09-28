@@ -11,7 +11,7 @@ void _puts_recursion(char *s)
 	int length = strlen(s);
 	int i = 0;
 
-	if (i >= length)
+	if (i == length)
 	{
 		return;
 	}
