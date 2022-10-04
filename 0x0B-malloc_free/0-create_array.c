@@ -6,27 +6,19 @@
  *@c: the character
  *Return: the pointer to the char
  */
-char *create_array(unsigned int size, char *c)
+char *create_array(unsigned int size, char c)
 {
-	unsigned int i = 0;
+	char *str;
 
-	if (size == 0)
+	str = (char*)malloc(size * sizeof(char));
+
+	if (size == 0 || str == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		while (1)
-		{
-			c = malloc(size * sizeof(char));
-			if (c == NULL)
-			{
-				return (NULL);
-			}
-
-			c[0] = 'H';
-			i++;
-		}
+		str[size] = c;
 	}
-	return (c);
+	return (str);
 }
