@@ -3,6 +3,7 @@
 /**
  *malloc_checked - checking malloc
  *@b: memory block size
+ *Return: returns a pointer
  */
 void *malloc_checked(unsigned int b)
 {
