@@ -3,6 +3,7 @@
 #include <stdlib.h>
 /**
  *_realloc - reallocating memory using malloc
+ *@ptr: the pointer
  *@old_size: initial memory size
  *@new_size: new memory size
  *Return: pointer to new array
