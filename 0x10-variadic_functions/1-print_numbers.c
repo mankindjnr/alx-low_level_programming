@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 /**
  *print_numbers - print numbers
- *@separator - the comma
+ *@separator: the comma
  *@n: numbers of integers passed as parameters
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -25,10 +25,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			if (separator != NULL)
 			{
 				printf("%s", separator);
-			}
-			else
-			{
-				printf(" ");
 			}
 		}
 	}
