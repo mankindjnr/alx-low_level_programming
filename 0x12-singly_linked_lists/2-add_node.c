@@ -18,7 +18,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 
 	newnode->str = tar;
-        newnode->next = *head;
+	newnode->next = *head;
 	newnode->len = strlen(str);
 	*head = newnode;
 
