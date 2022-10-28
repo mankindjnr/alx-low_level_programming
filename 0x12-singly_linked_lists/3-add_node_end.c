@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <string.h>
 
 /**
  *add_node_end - add a node at the end
@@ -18,6 +19,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 
 	newnode->str = strdup(str);
+	newnode->len = strlen(str);
 	newnode->next = 0;
 
 	if (*head == 0)
