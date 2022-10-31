@@ -1,19 +1,31 @@
 #include "main.h"
 
+void print_b(unsigned long int n);
+
 /**
- *print_binary - printing a binary
- *@n: the integer
+ *print_binary - printing binary
+ *@n: the int
  */
 void print_binary(unsigned long int n)
 {
-	long bno = 0, rem, f = 1;
+	if (n == 0)
+		_putchar('0');
+	else
+		print_b(n);
+}
 
-	while (n != 0)
-	{
-		rem = (n - (n >> 1) * 2);
-		bno = bno + rem * f;
-		f = f * 10;
-		n = n >> 1;
-	}
-	printf("%ld", bno);
+/**
+ *print_b - print binary
+ *@n: the int
+ */
+void print_b(unsigned long int n)
+{
+	if (n == 0)
+		return;
+
+	print_b((n >> 1));
+	if ((n & 1) == 1)
+		_putchar('1');
+        if ((n & 1) == 0)
+		_putchar('0');
 }
