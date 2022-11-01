@@ -14,7 +14,13 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	size = 25;
 
+	if (n == 0)
+		return (-1);
+
 	arr = malloc(size * sizeof(int));
+
+	if (arr == NULL)
+		return (-1);
 
 	for (i = 0; n > 0; i++)
 	{
