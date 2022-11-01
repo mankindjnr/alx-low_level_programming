@@ -14,6 +14,6 @@ void print_binary(unsigned long int n)
 		bno = bno + rem * f;
 		f = f * 10;
 		n = n >> 1;
+		_putchar(bno + '0');
 	}
-	printf("%ld", bno);
 }
