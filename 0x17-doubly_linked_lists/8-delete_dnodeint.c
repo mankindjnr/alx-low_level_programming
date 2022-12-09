@@ -46,54 +46,45 @@ void deleteAtBeg(dlistint_t **head)
 
 	temp = *head;
 
-        *head = (*head)->next;
-	(*head)->prev = NULL;
-        free(temp);
+	*head = temp->next;
+	if (temp->next != NULL)
+		(*head)->prev = NULL;
+	free(temp);
 }
 /**
  *delete_dnodeint_at_index - deete node at given index
  *@head: the head node pointer
  *@index: the given index
- *Retuen: 1 is successful -1 otherwise
+ *Return: 1 is successful -1 otherwise
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	unsigned int i;
-	size_t size_of_list;
 	dlistint_t *temp;
-	size_of_list = list_length(*head);
-	printf("the size is: %ld\nindex is: %d\n", size_of_list, index);
 
-	if (index < size_of_list)
+	if (head == NULL || *head == NULL)
+		return (-1);
+
+	if (index == 0)
 	{
-		if (index == 0)
-		{
-			deleteAtBeg(&(*head));
-		}
-		else if (index == (list_length(*head) - 1))
-		{
-			deleteAtEnd(&(*head));
-		}
-		else
-		{
-			temp = *head;
+		deleteAtBeg(&(*head));
+		return (1);
+	}
+	temp = *head;
 
-			for (i = 0; temp != NULL && i < index; i++)
-			{
-				temp = temp->next;
-			}
-
-			if (temp == NULL)
-				return (-1);
-
-			temp->prev->next = temp->next;
-			temp->next->prev = temp->prev;
+	for (i = 0; temp != NULL; i++)
+	{
+		if (i == index)
+		{
+			if (temp->next != NULL)
+				temp->next->prev = temp->prev;
+			if (temp->prev != NULL)
+				temp->prev->next = temp->next;
 
 			free(temp);
+			return (1);
 		}
+		temp = temp->next;
 	}
-
-	/*printf("the new size %ld\n", list_length(*head));*/
-
-	return (1);
+	return (-1);
 }
