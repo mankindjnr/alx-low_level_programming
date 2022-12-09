@@ -8,11 +8,13 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int  i = 0;
+	unsigned int  i;
 	dlistint_t *temp;
 	int initialSize, afterSize;
 
+	int correct = dlistint_len(&(*head));
 	initialSize = sizeof(dlistint_t);
+	printf("the size is: %d\n", correct);
 	temp = *head;
 
 	if (index == 0)
@@ -24,10 +26,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	else
 	{
-		while (i < index)
+		for (i = 0; i < index; i++)
 		{
 			temp = temp->next;
-			i++;
 		}
 
 		temp->prev->next = temp->next;
@@ -36,6 +37,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 
 	afterSize = sizeof(dlistint_t);
+	printf("the new size %d\n", afterSize);
 
 	if ((initialSize - 1) != afterSize)
 		return (-1);
