@@ -1,5 +1,10 @@
 #include "lists.h"
 
+/**
+ *list_len - length of a d list
+ *@h: the head node pointer
+ *Return: the size of the list
+ */
 size_t list_len(dlistint_t *h)
 {
 	size_t count;
@@ -26,7 +31,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *newnode, *temp;
 	unsigned int i = 0;
 
-        if (idx == 0)
+	if (idx == 0)
 	{
 		newnode = add_dnodeint(&(*h), n);
 	}
