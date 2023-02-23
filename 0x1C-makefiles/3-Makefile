@@ -4,18 +4,12 @@ SRC = main.c school.c
 # the list of .o files generated from SRC using substitution
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM := rm -f
+RM = rm -f
 
 # when we run make we will build the NAME target executable
 # the NAME targets depend on the OBJ files and create the NAME executable
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-# makefile also defines a pattern rule that tells Make how to build a '.o' file
-# from a corresponding '.c'. the rule uses '$<' automatic variable to refer to
-# the sourccee file name
-%.o: %.c
-	$(CC) -c $< -o $@
 
 # deletes all emacs temporary files along with the executable
 clean:
