@@ -12,8 +12,6 @@ CFLAGS  = -Wall -Werror -Wextra -pedantic
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
 # deletes all emacs temporary files along with the executable
 clean:
 	-$(RM) *~ $(NAME)
