@@ -25,6 +25,4 @@ fclean:
 	-$(RM) *~ $(NAME) $(OBJ)
 
 # forces recompilation of all source files
-re:
-	$(MAKE) oclean
-	$(MAKE) all
+re: oclean all
